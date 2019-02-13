@@ -1,0 +1,37 @@
+.chat, .phone, .email {
+    margin-left: 2px;
+    display: block;
+    transition: transform .1s;
+}
+
+.chat {
+    background-color: rgb(16, 118, 158);
+    color: white;
+    padding: 10px;
+}
+
+.phone {
+    background-color: purple;
+    color: white;
+    padding: 10px;
+}
+
+.email {
+    background-color: gray;
+    color: white;
+    padding: 10px;
+}
+
+/* hover transforms */
+
+.email:hover {
+    transform: scale(1.2);
+}
+
+.chat:hover {
+    transform: scale(1.2);
+}
+
+.phone:hover {
+    transform: scale(1.2);
+}

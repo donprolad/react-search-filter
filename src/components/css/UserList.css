@@ -1,0 +1,136 @@
+.member {
+    padding-bottom: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    height: 30rem;
+    border: 1px solid grey;
+    border-radius: 2.5%;
+    width: 100%;
+}
+
+.member h4 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.member-shadow {
+    -webkit-box-shadow: 0 8px 6px -6px grey;
+    -moz-box-shadow: 0 8px 6px -6px grey;
+    box-shadow: 0 8px 6px -6px grey;
+}
+
+.member-label {
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+.address {
+    text-align: left;
+    padding-left: 10vh;
+    padding-right: 10vh;
+}
+
+.container {
+  width: 100%;
+  height: 50%;
+  position: relative;
+}
+
+
+.container:hover .contact {
+    display: block;
+    position: relative;
+    float: left;
+    vertical-align: middle;
+    padding-top: 10%;
+    padding-left: 2%;
+    cursor: pointer
+}
+
+
+.user-hr {
+    width: 85%;
+    margin: 0.5rem;
+    border-color: grey;
+}
+
+.phone-align {
+    text-align: right;
+    padding: 5px;
+}
+
+a {
+    text-decoration: none;
+    text-transform: lowercase;
+    color: rgb(16, 118, 158);
+    font-weight: bold;
+    cursor: pointer
+}
+
+.wrapper {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Contact form */
+
+.contact {
+    display: none;
+    position: absolute;
+}
+
+/* Screen Resizing Media Queries */
+
+@media only screen and (max-width : 768px){
+    .wrapper, .container {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 15px;
+    }
+    .phone-align {
+        text-align: center;
+        padding: 5px;
+    }
+}
+
+@media only screen and (max-width : 703px){
+    .wrapper, .container {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .phone-align {
+        text-align: center;
+        padding: 5px;
+    }
+}
+
+@media only screen and (max-width : 414px){
+    .wrapper, .container {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .phone-align {
+        text-align: center;
+        padding: 5px;
+    }
+}
+
+@media only screen and (max-width : 320px){
+    .wrapper, .container {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .phone-align {
+        text-align: center;
+        padding: 5px;
+    }
+}
+
