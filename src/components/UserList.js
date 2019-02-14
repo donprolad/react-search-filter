@@ -50,13 +50,7 @@ class UserList extends React.Component {
           </div>
           {filteredUsers.map(user =>
             <div className='member member-shadow' key={user.id}>
-              <User username={user.username}
-                name={user.name}
-                email={user.email}
-                phone={user.phone}
-                website={user.website}
-                company={user.company.name}
-                geo={user.address.geo} />
+              <User user={user} />
             </div>)
           }
         </div>
