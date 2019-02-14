@@ -9,7 +9,7 @@ class UserList extends React.Component {
     this.state = {
       users: [],
       isLoaded: false,
-      hasError: null,
+      hasError: false,
       search: ''
     }
   }
@@ -26,15 +26,17 @@ class UserList extends React.Component {
   }
 
   render () {
-    const { hasError } = this.state.isLoaded
+    const { hasError } = this.state.hasError
 
     let filteredUsers = this.state.users.filter(
       user => {
-        return user.username.indexOf(this.state.search) !== -1 ||
-          user.username.toLowerCase().indexOf(this.state.search) !== -1 ||
-          user.name.indexOf(this.state.search) !== -1 ||
-          user.email.toLowerCase().indexOf(this.state.search) !== -1 ||
-          user.phone.indexOf(this.state.search) !== -1
+        return user.username.includes(this.state.search) ||
+        user.username.toLowerCase().includes(this.state.search) ||
+        user.name.includes(this.state.search) ||
+        user.name.toLowerCase().includes(this.state.search) ||
+        user.email.includes(this.state.search) ||
+        user.email.toLowerCase().includes(this.state.search) ||
+        user.phone.includes(this.state.search)
       }
     )
     if (hasError) return <div><p>Error loading component</p></div>
