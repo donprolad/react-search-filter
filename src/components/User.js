@@ -1,31 +1,24 @@
 import React from 'react'
 import Contact from './Contact'
+import UserDetails from './UserDetails'
 
 const User = props => {
   return (
     <div className='container'>
       <div className='user-heading'>
-        <h4>{props.username}</h4>
+        <h4>{props.user.username}</h4>
         <Contact contactClass='contact' />
       </div>
-      <address className='address'>
-        <label className='member-label'>Name:</label>
-        <p>{props.name}</p>
-        <label className='member-label'>Email:</label>
-        <p><a href={`"mailto:${props.email}"`}>{props.email}</a></p>
-        <hr className='user-hr' />
-        <label className='member-label'>Company:</label>
-        <p>{props.company}</p>
-        <label className='member-label'>Website:</label>
-        <p><a href={props.website}>{props.website}</a></p>
-        <hr className='user-hr' />
-        <label className='member-label'>Location:</label>
-        <p>lat.{props.geo.lat} long.{props.geo.lng}</p>
-        <hr className='user-hr' />
+      <div className='user-details'>
+        <UserDetails sectionTitle='Name:' content={props.user.name} />
+        <UserDetails sectionTitle='Email:' content={props.user.email} />
+        <UserDetails sectionTitle='Company:' content={props.user.company.name} />
+        <UserDetails sectionTitle='Website:' content={props.user.website} />
+        <UserDetails sectionTitle='Location:' content={`lat.${props.user.address.geo.lat} long.${props.user.address.geo.lng}`} />
         <div className='phone-align'>
-          <i className='fa fa-phone' /> <a href={`"tel:+${props.phone}"`}>{props.phone}</a>
+          <i className='fa fa-phone' /> <a href={`"tel:+${props.user.phone}"`}>{props.user.phone}</a>
         </div>
-      </address>
+      </div>
     </div>
   )
 }
