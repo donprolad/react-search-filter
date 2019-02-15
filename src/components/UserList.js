@@ -6,6 +6,7 @@ import User from './User'
 class UserList extends React.Component {
   constructor () {
     super()
+    this.textInput = React.createRef()
     this.state = {
       users: [],
       isLoaded: false,
@@ -22,7 +23,8 @@ class UserList extends React.Component {
   }
 
   updateSearch (event) {
-    this.setState({ search: event.target.value.substr(0, 20) })
+    // this.setState({ search: event.target.value.substr(0, 20) })
+    this.setState({ search: this.textInput.current.value })
   }
 
   render () {
@@ -44,8 +46,8 @@ class UserList extends React.Component {
       return (
         <div className='wrapper'>
           <div className='search'>
-            <input type='text' tabIndex='0'
-              value={this.state.search}
+            <input type='text' tabIndex='0' ref={this.textInput}
+              // value={this.state.search}
               onChange={this.updateSearch.bind(this)} />
           </div>
           {filteredUsers.map(user =>
