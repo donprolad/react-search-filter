@@ -44,7 +44,6 @@
     display: block;
     position: relative;
     float: left;
-    vertical-align: middle;
     padding-top: 10%;
     padding-left: 2%;
     cursor: pointer
@@ -87,7 +86,7 @@ a {
 
 @media only screen and (max-width : 768px){
     .wrapper, .container {
-        width: 100%;
+        width: 95%;
         margin-left: auto;
         margin-right: auto;
         line-height: 15px;
@@ -98,39 +97,8 @@ a {
     }
 }
 
-@media only screen and (max-width : 703px){
-    .wrapper, .container {
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .phone-align {
-        text-align: center;
-        padding: 5px;
-    }
-}
-
-@media only screen and (max-width : 414px){
-    .wrapper, .container {
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .phone-align {
-        text-align: center;
-        padding: 5px;
-    }
-}
-
-@media only screen and (max-width : 320px){
-    .wrapper, .container {
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .phone-align {
-        text-align: center;
-        padding: 5px;
-    }
-}
+/* @media only screen and (max-width : 703px)
+ * @media only screen and (max-width : 414px)
+ * @media only screen and (max-width : 320px)
+ */
 

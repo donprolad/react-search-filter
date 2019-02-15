@@ -14,7 +14,8 @@ const User = props => {
         <UserDetails sectionTitle='Email:' content={props.user.email} />
         <UserDetails sectionTitle='Company:' content={props.user.company.name} />
         <UserDetails sectionTitle='Website:' content={props.user.website} />
-        <UserDetails sectionTitle='Location:' content={`lat.${props.user.address.geo.lat} long.${props.user.address.geo.lng}`} />
+        <UserDetails sectionTitle='Location:'
+          content={`lat.${props.user.address.geo.lat} long.${props.user.address.geo.lng}`} />
         <div className='phone-align'>
           <i className='fa fa-phone' /> <a href={`"tel:+${props.user.phone}"`}>{props.user.phone}</a>
         </div>
